@@ -1,0 +1,291 @@
+/* @logo
+
+    Main logo of the page
+*/
+.logo {
+    display: block;
+    width: 218px;
+    height: 34px;
+    background: url(../images/coral-logo.png) center / auto no-repeat;
+}
+
+/* @already-member
+
+    Already member of the site
+    Link to the login page
+*/
+.already-member {
+    border: 1px solid #fff;
+    border-right: 0;
+    border-radius: 4px;
+    position: relative;
+    left: 10px;
+    top: -1px;
+    padding: 7px;
+    padding-right: 12px;
+
+    &:after {
+        content: "";
+        height: 1px;
+        width: calc(100% - 16px);
+        background: #FFF;
+        position: absolute;
+        left: 0;
+        right: 5px;
+        bottom: 5px;
+        margin: auto;
+    }
+}
+
+
+/* @login-button
+
+    Login button of the header
+*/
+.login-button {
+    @include font-size-12($arial-font, normal);
+    color: $white-color;
+
+    display: flex;
+    align-items: center;
+
+    > .login {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+
+.preamble {
+    @include font-size-22($headline-oblique-font, normal);
+    display: block;
+    color: $white-color;
+    text-transform: uppercase;
+}
+
+.promo {
+    @include font-size-48($headline-oblique-font, normal);
+    text-transform: uppercase;
+    display: block;
+    line-height: 42px;
+
+    background-image: linear-gradient(180deg, #ffe903, #ffce00 80%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+
+    &.-larger {
+        font-size: 7rem;
+        display: block;
+        line-height: 88px;
+    }
+}
+
+.post {
+    @include font-size-14($text-medium-font, normal);
+    color: $white-color;
+    text-transform: uppercase;
+}
+
+
+
+
+.error {
+    color: #ea4632;
+    text-transform: uppercase;
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.email-field {
+    @include font-size-16($text-font, normal);
+    padding: 12px;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.field-container {
+    width: 100%;
+    max-width: 260px;
+    position: relative;
+}
+
+
+.button {
+    @include font-size-22($text-bold-italic-font, normal);
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 100%;
+    max-width: 252px;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    position: relative;
+    cursor: pointer;
+
+    &.-submit {
+        background-image:
+            linear-gradient(
+                100deg, 
+                #241e48 24%, 
+                #64acdf 50%, 
+                #241e48 76%
+            );
+        border: 2px solid #77bc20;
+
+
+        &:hover {
+            background-image:
+            linear-gradient(
+                100deg, 
+                #64acdf 6%, 
+                #241e48 50%, 
+                #64acdf 94%
+            );
+        }
+
+        &:before {
+            content: "";
+            width: calc(100% + 8px);
+            height: calc(100% + 8px);
+            background: #ffcf00;
+            top: -4px;
+            left: -4px;
+            position: absolute;
+            z-index: -1;
+            border-radius: 8px;
+        }
+
+        &:after {
+            content: "";
+            width: calc(100% + 12px);
+            height: calc(100% + 12px);
+            background: #ea4632;
+            top: -6px;
+            left: -6px;
+            position: absolute;
+            z-index: -2;
+            border-radius: 8px;
+        }
+    }
+}
+
+.link {
+    @include font-size-10($font-type: $ui-font, $weight: normal);
+    color: #fff;
+    display: block;
+}
+
+
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotateZ(0deg)
+    }
+    to {
+        -webkit-transform: rotateZ(360deg)
+    }
+}
+
+.ring {
+    -webkit-animation: rotate 3s infinite linear;
+    animation: rotate 3s infinite linear;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    
+    > .shine1,
+    > .shine2,
+    > .shine3,
+    > .shine4 {
+        width: 2px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 9px;
+        background: rgba(#fff, 1);
+        border-radius: 50%;
+
+        box-shadow: 0px 0px 12px 8px rgba(#fff, 0.8);
+    }
+
+    > .shine2 {
+        top: 36px;
+        left: auto;
+        right: 0;
+    }
+
+    > .shine3 {
+        top: auto;
+        bottom: 36px;
+        left: 0;
+    }
+
+    > .shine4 {
+        top: auto;
+        bottom: 1px;
+        left: auto;
+        right: 32px; 
+    }
+}
+
+.step {
+    width: 110px;
+    height: 110px;
+    display: block;
+    background: url(../images/icons/step-holder.png) center / auto no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: relative;
+
+    > .number {
+        @include font-size-48($headline-font, normal);
+        font-size: 5rem;
+
+        background-image: linear-gradient(
+            180deg,
+            #003f93 10%,
+            #0065d4 50%,
+            #003f93 90%
+        );
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent; 
+    }
+}
+
+.context {
+    @include font-size-20($text-bold-font, normal);
+    color: #fff;
+    line-height: 1.125;
+    text-transform: uppercase;
+}
+
+> .gambleware {
+    width: 100%;
+}

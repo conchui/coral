@@ -1,0 +1,29 @@
+# ignore the following directories
+.git/
+vendor/
+
+# Don't include vagrant file
+*.log
+.vagrant
+Vagrantfile
+
+
+# ignore the following files
+composer.lock
+
+# Ignore MacOSX Generated Files
+._*
+.DS_Store
+
+# Ignore cache
+.sass-cache
+
+# IDE specific configuration
+.idea
+.vscode
+
+# Ignore node js modules
+node_modules
+
+# Ignore uploaded files
+uploads/*

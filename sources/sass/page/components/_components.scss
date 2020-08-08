@@ -1,0 +1,187 @@
+
+.promo-message {
+    text-align: center;
+    width: 100%;
+}
+
+
+.signin-promo {
+    background: url(../images/coral-promo.png) center / auto no-repeat;
+
+    width: 544px;
+    height: 610px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 194px;
+        height: 46px;
+        background: url(../images/new-customer-offer.png) center / auto no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 200px;
+    }
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 50px;
+
+    > .field-container {
+        margin-bottom: 12px;
+    }
+}
+
+.single-step {
+    display: flex;
+    align-items: center;
+
+    > .context {
+        flex: 1;
+        margin-left: 16px;
+    }
+}
+
+
+.promo-steps {
+    display: flex;
+    
+    > .single-step {
+        flex: 1;
+        padding-right: 20px;
+        margin-right: 20px;
+        position: relative;
+
+        &:after {
+            content: "";
+            background: url(../images/divider.png)  center / auto no-repeat;
+            top: 0;
+            right: 0;
+            position: absolute;
+            height: 100%;
+            width: 16px;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+            margin-right: 0;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+}
+
+.gambleware-banner {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+
+    > .footer-link {
+        padding-right: 8px;
+        border-right: 1px solid #fff;
+        margin-right: 8px;
+    
+        &:last-of-type {
+            padding-right: 0;
+            border-right: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.overlay {
+    display: none;
+}
+
+.pop-up {
+    display: none;
+}
+
+.scroll-up {
+    position: absolute;
+    top: 100%;
+    background: #002346;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    padding: 32px;
+    transition: top 0.4s ease;
+
+    &.-active {
+        top: 0;
+        transition: top 0.4s ease;
+    }
+
+    > .title {
+        @include font-size-14($arial-font, normal);
+        line-height: 1.6;
+        color: #fff;
+        margin-bottom: 20px;
+
+        text-align: center;
+        cursor: pointer;
+    }
+
+    > .about-item {
+        @include font-size-14($arial-font, normal);
+        line-height: 1.6;
+        color: #fff;
+
+        max-width: 900px;
+        margin: auto;
+        padding: 0 32px;
+        
+        &:last-of-type {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 32px;
+        }
+    }
+}
+
+/* @body-header
+
+    Main header of the page
+*/
+.body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* @main-body
+
+    Whole wrapper of the page.
+*/
+.main-body {
+    max-width: 920px;
+    margin: auto;
+    padding: 30px 32px 70px;
+    position: relative;
+}
+
+
+.main-wrapper {
+    position: relative;
+    overflow: hidden;
+}

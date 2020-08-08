@@ -1,0 +1,8 @@
+body {
+  width : 100%;
+  min-height: 100vh;
+  background: #002346 url(../images/coral-bg.jpg) center / auto 100% no-repeat;
+  position: relative;
+}
+
+@include eq-selectors();
